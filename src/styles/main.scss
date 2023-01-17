@@ -1,0 +1,17 @@
+@import "color";
+@import "fonts";
+@import "text.mixins";
+@import "devices.mixins";
+
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,106 @@
+@import "styles/main";
+@import 'styles/devices.mixins';
+
+:root {
+  color-scheme: light;
+}
+
+*,
+*:before,
+*:after,
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #FFFFFF;
+  color: $black;
+  @include h5-desktop;
+
+  @include small-desktop {
+    @include h5-desktop-small;
+  }
+
+  @include tablet-width {
+    @include h5-tablet;
+  }
+
+  @include mobile-width{
+    @include h5-mobile;
+  }
+}
+
+
+body::-webkit-scrollbar,
+.career::-webkit-scrollbar {
+  width: 4px;
+}
+
+body::-webkit-scrollbar-track,
+.career::-webkit-scrollbar-track{
+  box-shadow: transparent;
+}
+
+body::-webkit-scrollbar-thumb,
+.career::-webkit-scrollbar-thumb {
+  background-color: $black;
+}
+
+ol,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: scroll;
+
+  @include tablet-width {
+    min-height: 100vh;
+    height: auto;
+  }
+
+  @include mobile-width {
+    min-height: 100vh;
+    height: auto;
+  }
+
+  & > main {
+    flex: 1;
+  }
+
+  & > footer {
+    flex: 0;
+  }
+}
+
+.content {
+  max-width: 1660px;
+  width: 100%;
+  margin: 0 auto;
+
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+}
+
+.stop-point{
+  scroll-snap-align: start;
+  scroll-snap-stop: always
+}
+.stop-point-center{
+  scroll-snap-align: center;
+}
+.stop-point-end{
+  scroll-snap-align: end;
+}

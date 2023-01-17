@@ -1,0 +1,20 @@
+@import "../../styles/main";
+
+.customer-wrapper{
+  height: 155px;
+  padding-left: 101px;
+
+  .customer-info{
+    p{
+      margin-bottom:0px;
+      box-sizing: border-box;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 200%;
+      letter-spacing: -0.005em;
+      color: #333333;
+    }
+
+  }
+}

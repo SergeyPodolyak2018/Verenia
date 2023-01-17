@@ -1,0 +1,138 @@
+@import "../../styles/main";
+
+.header{
+  background-size: auto auto;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 919px;
+  position: relative;
+
+  &-cover{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    background: #0094D9;
+    opacity: 0.6;
+  }
+  &-logo{
+    position: absolute;
+    width: 318px;
+    height: 93px;
+    left: 50%;
+    top: 51px;
+    transform: translateX(-50%);
+    z-index: 100;
+  }
+  &-text{
+    position: absolute;
+    left: 180px;
+    top: 253px;
+    background: linear-gradient(57.2deg, #0094D9 15.72%, #18CEBD 74.72%);
+    opacity: 0.8;
+    width: 880px;
+    height: 512px;
+    z-index: 150;
+    @include small-desktop{
+      left: 50%;
+      top: 30%;
+      transform: translateX(-50%);
+    }
+    &-container{
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+
+      .sub-text{
+        width: 838px;
+        margin-top: 192px;
+        margin-left: 24px;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 170%;
+        letter-spacing: -0.005em;
+        color: $white;
+
+      }
+
+    }
+    &-container-rect{
+      position: absolute;
+      left: 30px;
+      top: -215px;
+      background: linear-gradient(57.2deg, #0094D9 15.72%, #18CEBD 74.72%);
+      opacity: 0.7;
+      width: 874px;
+      height: 200px;
+      z-index: 160;
+
+      .main-text{
+        margin-top: 47px;
+        margin-left: 8px;
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 160%;
+        color: $white;
+      }
+    }
+  }
+  &-bolb{
+    position: absolute;
+    right: 10px;
+    bottom: -171px;
+    width: 477px;
+    height: 477px;
+    z-index: 100;
+    @include small-desktop{
+      display: none;
+    }
+
+    &-container{
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      .big-bolb-decorator{
+        z-index: 120;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: linear-gradient(180deg, rgba(24, 206, 190, 0.5) 0%, rgba(6, 132, 215, 0.5) 92.68%);
+        border-radius: 50%;
+      }
+
+      .big-bolb{
+        z-index: 110;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-size: auto auto;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+      }
+      .small-bolb{
+        z-index: 130;
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        left: 70.39%;
+        top: 4.76%;
+        border-radius: 50%;
+        background: linear-gradient(180deg, #18CEBD 0%, #0094D9 100%);
+        filter: blur(10.1935px);
+        transform: rotate(-70.42deg);
+      }
+    }
+  }
+
+
+}

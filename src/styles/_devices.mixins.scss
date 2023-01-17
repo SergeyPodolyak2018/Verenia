@@ -1,0 +1,47 @@
+@mixin big-desktop {
+  @media screen and (min-width: 1440px){
+    @content
+  }
+}
+
+@mixin regular-desktop {
+  @media screen and (min-width: 1221px){
+    @content
+  }
+}
+
+@mixin small-desktop {
+  @media screen and (max-width: 1440px){
+    @content
+  }
+}
+
+@mixin just-small-desktop {
+  @media screen and (max-width: 1440px) and (min-width: 1221px) {
+    @content
+  }
+}
+
+@mixin laptop-width {
+  @media screen and (max-width: 1024px){
+    @content
+  }
+}
+
+@mixin tablet-width {
+  @media screen and (max-width: 1220px){
+    @content
+  }
+}
+
+@mixin smallTablet-width {
+  @media screen and (max-width: 834px){
+    @content
+  }
+}
+
+@mixin mobile-width {
+  @media screen and (max-width: 480px){
+    @content
+  }
+}

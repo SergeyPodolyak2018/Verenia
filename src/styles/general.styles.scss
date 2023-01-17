@@ -1,0 +1,154 @@
+@import "./devices.mixins";
+@import "./text.mixins";
+
+.title {
+  @include h1-desktop;
+
+  @include small-desktop {
+    @include h1-desktop-small;
+  }
+
+  @include tablet-width {
+    @include h1-tablet;
+  }
+
+  @include smallTablet-width {
+    font-size: 76px;
+    line-height: 76px;
+  }
+
+  @media screen and (max-width: 550px) {
+    font-size: 56px;
+    line-height: 68px;
+  }
+
+  @include mobile-width {
+    @include h1-mobile;
+  }
+
+  @media screen and (max-width: 320px) {
+    font-size: 40px;
+  }
+}
+
+//mixin h5
+.text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+
+  @include small-desktop {
+    @include h5-desktop-small;
+  }
+
+  @include tablet-width {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  @include mobile-width {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.page-wrapper {
+  padding: 0 0 63px;
+  @include h5-desktop;
+
+  @include small-desktop {
+    padding: 102px 0 0px;
+    @include h5-desktop-small;
+  }
+
+  &.services {
+    @media screen and (max-width: 1440px){
+      padding-top: 108px;
+    }
+    @media screen and (min-width: 1440px){
+      padding-top: 130px;
+    }
+  }
+
+  &.genesys {
+    @media screen and (min-width: 1221px){
+      height: 100%;
+    }
+  }
+
+  @include tablet-width {
+    @include h5-tablet;
+    padding: 152px 0 88px;
+  }
+
+  @include mobile-width {
+    @include h5-mobile;
+    padding: 104px 0 71px;
+  }
+
+  & > section {
+    margin-bottom: 180px;
+
+    @include tablet-width {
+      margin-bottom: 200px
+    }
+
+    @include smallTablet-width {
+      margin-bottom: 136px
+    }
+  }
+  & > section:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 1221px){
+    & > section.centered-block {
+      margin-bottom: 0;
+    }
+  }
+}
+
+//to align page content on center on big device size
+//need to have just one child - div
+//for career and contacts pages
+.page-flex-wrapper {
+  min-height: calc(100vh - 122px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 130px;
+
+  @include tablet-width {
+    min-height: auto;
+    display: block;
+    padding-top: 152px;
+    padding-bottom: 88px;
+  }
+
+  @include mobile-width {
+    padding-top: 114px;
+    padding-bottom: 71px;
+  }
+
+  & > div {
+    widh: 100%
+  }
+}
+
+.centered-block {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 125px 0;
+
+  @include regular-desktop{
+    padding-top: 0px;
+  }
+
+  @include tablet-width {
+    min-height: auto;
+    display: block;
+    padding: 0;
+  }
+}
